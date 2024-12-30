@@ -1,0 +1,42 @@
+.metin{
+    height: max-content;
+    width: 800px;
+    background-color: peru;
+    padding: 1rem 1rem 1rem 1rem ;
+    margin:1rem 1rem 1rem 1rem ;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 8px;
+}
+
+
+.bigmit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+.h2{
+    text-align: center;
+}
+
+.dlbt{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.a{ 
+    text-decoration: none;
+    color: black;
+}
+
+.btn{
+height: 45px;
+width: 200px;
+font-size: 22px;
+}

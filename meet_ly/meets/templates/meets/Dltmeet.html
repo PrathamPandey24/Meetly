@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+{% block css_files%}
+<link rel="stylesheet" href="{% static "meets/Dltmeet.css" %}">
+{% endblock %}
+
+<h2 class="h2">Confirm Deletion</h2>
+<p class="p">this cant be undone</p>
+
+
+<form method="Post">
+{% csrf_token %}
+<div class="dlt" ><button class="button" type="submit">Confirm</button></div>
+<div class="ddlt" style=""><button class="button" ><a class="a" href="{% url 'allmeet' %}">Cancel</a></button></div>
+</form>
+{% endblock %}
+

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}All Meets{% endblock %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "meets/AllMeets.css" %}">
+{% endblock %}
+
+
+
+{% block content %}
+    <h1>All Meets </h1>
+    <h2><button><a href ="add/" >Add a Meet</a></button></h2>
+    <ul>
+
+        {% for meet in meets %}
+        <div class="bigmit">
+            <li>
+                <div class="metin"><a href="{% url 'meet' pk=meet.id %}">{{ meet.Place }}</a></div>
+            </li>
+        </div>
+        {% endfor %}
+        
+    </ul>
+{% endblock %}

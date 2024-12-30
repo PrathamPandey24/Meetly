@@ -1,0 +1,34 @@
+#main-head{
+    background-color:black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left:1rem;
+    padding-right:1rem ;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-style: solid;
+    border-color: rgb(143, 235, 5);
+    border-width: 0.25rem;
+    border-radius: 0.4rem;
+    height: 50px;
+}
+
+#main-head h1 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+#main-head a {
+    color: yellow;
+    text-decoration: none;
+    font-size: bold;
+    font-size: 1.5rem;
+}
+
+#main-head a:hover,
+#main-head a:active {
+    color: rgb(222, 39, 39);
+    font-size: 30px;
+}

@@ -1,0 +1,24 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block title %}Meet Detail{% endblock %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "meets/MeetDetail.css" %}">
+{% endblock %}
+{% block content %}
+
+    <h1>MEET DETAIL</h1>
+
+    
+
+
+    <div class="bigmit">
+        
+        <div class="metin">{{ meet.Place }}</div>
+        <div class="metin">{{ meet.date }}</div>
+        <div class="metin">{{ meet.time }}</div>
+        <div class="metin">{{ meet.Description }}</div>
+    </div>
+
+    <div class="dlbt"><button class="btn"><a class="a" href="delete/">Delete</a></button></div>
+{% endblock %}

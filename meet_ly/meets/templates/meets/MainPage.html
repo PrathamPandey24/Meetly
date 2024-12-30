@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %} 
+
+
+
+{% block css %}
+ 
+<link rel="stylesheet" href='{% static "meets/mainpage.css" %}'>
+{% endblock %}
+{% block title %}Main Page{% endblock %}
+
+{% block content %}
+
+<h1 style="text-align: center;" >UPCOMING MEETS</h1>
+
+<section id="upcom" style="text-align: center;
+   display:flex;
+   flex-direction:row;
+   justify-content:space-around;
+   background-color: black;">
+
+
+
+    {% for meet in meets%}
+  <div class="meethold" style="padding:2px, 2px, 2px, 2px;" >
+    <ul style="list-style-type:none;
+               padding-left: 10px;">
+        <li>
+            <div class="meet" style="background-color:gray; 
+             align-items:center;
+             border-radius: 10px;
+             padding: 2px 2px 2px 2px;
+             height: 300px;
+             width: 200px;
+             display: flex;
+             flex-direction: column;
+             justify-content: space-around;">
+            
+             <h2 style="text-decoration: none; color: white;">{{meet.Place}}</h2>
+             <p style="text-decoration: none; color: white;">{{meet.date}}</p>
+                <a class="link" href="{% url 'meet' pk=meet.id %}"  style="text-decoration: none; color: white;">  
+                <button style="border-radius:3px;">GET DETAILS</button>
+                </a>
+            </div>
+        </li>
+    </ul>
+  </div>
+    {% endfor %}   
+</section>
+
+<section style="border-style: solid;
+border-color:black;
+border-width: 4px;
+background-color:gray;
+"> 
+
+<div style="
+display:flex;
+flex-direction:column;
+align-items:center;
+margin-top:2rem;
+padding-right:2rem;
+font-size:1.5rem;
+">
+<div> Developed by:</div>
+<div>Pratham Pandey</div>
+<div>Travelling and Technology Enthusiast</div>
+<div><a href="https://www.linkedin.com/in/pratham-pandey-1b1b3b1b1/">LinkedIn</a></div>
+</div>
+
+</section>
+
+{% endblock%}

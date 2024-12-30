@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title %}{%endblock%}</title>
+   <link rel="stylesheet" href="{% static "app.css" %}">
+    {%block css_files %}{%endblock%}
+
+ </head>
+ <body>
+     <section >
+       <header id="main-head">
+          <div><p><a href="{% url "MainPage" %}" >MAIN PAGE </a></p></div>
+          <div><h1>MEETLY</h1></div>
+          <div><p><a href="{% url "allmeet" %}" >YOUR MEETS</a></p></div>
+       </header>
+      </section>
+
+    <section id="Mpcd"> 
+        {%block content %}
+        <p>Content</p>
+        {%endblock%}
+    </section>  
+ </body>
+</html>
